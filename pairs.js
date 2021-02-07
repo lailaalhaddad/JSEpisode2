@@ -18,11 +18,16 @@
 *       pairs() returns []
 ****************************************************************/
 function pairs(names) {
-  // Your code goes here
+  let newarr = [];
+  while (names.length > 1){
+      newarr.push([names.getRandom(), names.getRandom()]);
+  }
+  if (names.length > 0){
+    newarr.push([names.pop()]);
+  }
+    return newarr;
 }
-
 module.exports = pairs;
-
 /**********************************************
 * READ ME!!!!
 *
